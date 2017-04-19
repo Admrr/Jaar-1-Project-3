@@ -2,7 +2,7 @@ import psycopg2
 
 class Database:  
     def interact_with_database(command):
-        connection = psycopg2.connect(host = "localhost", dbname = "Jaar 1 Project 3", user = "postgres", password = "DatThaBeast3636")
+        connection = psycopg2.connect(host = "localhost", dbname = "Project 3", user = "postgres", password = "61hhsjmercedes")
         cursor = connection.cursor()
         # Execute the command
         cursor.execute(command)

@@ -87,6 +87,7 @@ class Standaard_Kaart:
         self.button19.grid(row = 18, column = 0)
         self.button20.grid(row = 19, column = 0)
 
+
 # Function that gets the ammount of metro station per neighboorhood
 def numbers_metro_result():
     # Create a empty list for the results
@@ -576,6 +577,8 @@ def metro_stations():
         canvas.create_image(item[0], item[1], image = mimg)
     # Create final images
     canvas.create_image((width - (mlimg.width()/2)), (height - (mlimg.height()/2)), image = mlimg)
+    global q3
+    q3 = canvas.create_text(10, 680, anchor = W, font = "Arial", text = "Aantal metrostations per km2 van een wijk \n Aantal metrostations / Aantal km2 per wijk \n Resultaat = cijfertal")
 
 # Create police station
 def politiebureau():
@@ -591,6 +594,8 @@ def politiebureau():
         canvas.create_image(item[0], item[1], image = pimg)
     # Create the final image
     canvas.create_image((width - (climg.width()/2)), (height - (climg.height()/2)), image = climg)
+    global q1
+    q1 = canvas.create_text(10, 680, anchor = W, font = "Arial", text = "Gemiddelde specifieke criminaliteit van een wijk \n Percentage van het type criminaliteit \n Resultaat = Gemiddelde cijfertal (veiligheidsindex)")
 
 # Create markets
 def markten():
@@ -601,7 +606,7 @@ def markten():
     global marimg
     marimg = PhotoImage(file = "Markt legenda.gif")
     global q2
-    q2 = canvas.create_text(10, 680, anchor = W, font = "Arial", text = "Kans op gratis parkeren bij de markt")
+    q2 = canvas.create_text(10, 680, anchor = W, font = "Arial", text = "Kans op gratis parkeren bij de markt \n Aantal parkeerautomaten / Aantal markten \n Resultaat = cijfertal")
     global maing
     maing = PhotoImage(file = "rsz_markt.gif")
 
