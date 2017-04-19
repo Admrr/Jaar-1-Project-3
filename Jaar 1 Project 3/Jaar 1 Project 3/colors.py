@@ -1,5 +1,7 @@
+# Create color
 def grey(): return "#999999"
 
+# Return hex
 def rgb_to_hex(result, base, cap, reversed):
     mod = result/cap
     if reversed:

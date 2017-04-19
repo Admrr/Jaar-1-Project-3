@@ -19,6 +19,7 @@ class Database:
         connection.close()
         return results
 
+    # Execute queries
     def get_crime_data(result, jaar, wijk):
         return Database.interact_with_database("SELECT " + str(result) + " FROM criminaliteit WHERE jaar = " + str(jaar) + " AND wijk = " + str(wijk))[0][0]
 

@@ -1,3 +1,5 @@
+# Creating graphs
+
 from database import Database as d
 import numpy as np
 import matplotlib.pyplot as plt
